@@ -1,5 +1,5 @@
 body {
-  background: #f5f7fa;
+  background: #e0e0e0;
   font-family: 'Mitr', sans-serif;
   color: #222;
   margin: 0;
@@ -102,7 +102,7 @@ h1 {
   font-size: 3em;
   font-weight: bold;
   color: #222;
-  margin: 15px 4px 0 4px; /* ขยับลงมาด้านล่างเพิ่มอีก */
+ /** margin: 15px 4px 0 4px; /* ขยับลงมาด้านล่างเพิ่มอีก */
   display: flex;
   align-items: center;
 }
@@ -142,5 +142,36 @@ h1 {
   .container {
     width: 95%; /* ใช้ความกว้างเต็มจอมือถือ */
     max-width: none; /* ยกเลิกขนาดสูงสุด */
+  }
+}
+
+/* เพิ่ม CSS สำหรับหิมะตก */
+.snowflake {
+  position: absolute;
+  top: -50px;
+  z-index: 1000;
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+.snowflake:nth-child(odd) {
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.snowflake:nth-child(even) {
+  animation-duration: 15s;
+  animation-delay: 5s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
   }
 }
