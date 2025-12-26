@@ -22,6 +22,8 @@ h1 {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+
 .subtitle {
   color: #444;
   margin-bottom: 32px;
@@ -117,6 +119,13 @@ h1 {
   border: 2px solid #1a5ae6;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.main-title1 {
+  color: #333;
+  font-size: 1.8em; /* ขนาดเล็กกว่าปกติ */
+  margin-bottom: 12px;
+  font-weight: 300; /* ตัวบาง */
+  letter-spacing: 0.5px;
+}
 @media (max-width: 768px) {
   .stat-number {
     font-size: 3em;
@@ -124,10 +133,11 @@ h1 {
   .main-title {
     font-size: 2em;
   }
+
   .digit {
-    font-size: 3em; /* ลดขนาดตัวเลขสำหรับจอมือถือ */
+    font-size: 2em; /* ลดขนาดตัวเลขสำหรับจอมือถือ */
     width: 60px; /* ลดขนาดกรอบให้เหมาะสม */
-    padding: 12px; /* ลด padding ให้พอดี */
+    padding: 5px; /* ลด padding ให้พอดี */
   }
   .container {
     width: 95%; /* ใช้ความกว้างเต็มจอมือถือ */

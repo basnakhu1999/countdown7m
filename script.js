@@ -50,7 +50,7 @@ function updateDateTime() {
     minute: '2-digit',
     second: '2-digit',
   });
-  document.querySelector('.footer').textContent = `ท่าอากาศยานขอนแก่น | ${formattedDateTime}`;
+  document.querySelector('.footer').textContent = `${formattedDateTime}`;
 }
 
 initializeDigits();
