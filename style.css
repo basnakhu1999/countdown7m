@@ -1,0 +1,136 @@
+body {
+  background: #f5f7fa;
+  font-family: 'Mitr', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 95%; /* ขยายให้ใหญ่ขึ้น */
+  max-width: 1400px; /* เพิ่มขนาดสูงสุดสำหรับหน้าจอใหญ่ */
+  text-align: center;
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+}
+h1 {
+  color: #222;
+  font-size: 2.5em;
+  margin-bottom: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.subtitle {
+  color: #444;
+  margin-bottom: 32px;
+  font-size: 1.1em;
+}
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.stat-box {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.digit {
+  background: #2f37b1;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 4em; /* เพิ่มขนาดตัวเลขให้ใหญ่ขึ้น */
+  font-weight: bold;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  width: 70px; /* ปรับขนาดกรอบให้เหมาะสมกับตัวเลข */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.digit span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+.digit.animate span {
+  transform: translateY(-100%);
+}
+.stat-number {
+  font-size: 4em;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 1px;
+}
+.stat-label {
+  font-size: 1.1em;
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+.progress-bar {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 12px;
+  height: 32px;
+  margin: 24px 0;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #1a5ae6, #43a047);
+  width: 0%;
+  transition: width 1s;
+}
+.footer {
+  margin-top: 32px;
+  color: #888;
+  font-size: 1em;
+}
+.comma {
+  font-size: 3em;
+  font-weight: bold;
+  color: #222;
+  margin: 15px 4px 0 4px; /* ขยับลงมาด้านล่างเพิ่มอีก */
+  display: flex;
+  align-items: center;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #1a5ae6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 3em;
+  }
+  .main-title {
+    font-size: 2em;
+  }
+  .digit {
+    font-size: 3em; /* ลดขนาดตัวเลขสำหรับจอมือถือ */
+    width: 60px; /* ลดขนาดกรอบให้เหมาะสม */
+    padding: 12px; /* ลด padding ให้พอดี */
+  }
+  .container {
+    width: 95%; /* ใช้ความกว้างเต็มจอมือถือ */
+    max-width: none; /* ยกเลิกขนาดสูงสุด */
+  }
+}
